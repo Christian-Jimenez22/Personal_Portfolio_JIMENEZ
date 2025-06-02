@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #76060691;
+  color: white;
+  padding: 10px 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.nav-btn:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin-top: 60px;
+}
+
+.section {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section.active {
+  display: block;
+}
+
+#home {
+  background-image: url('pokemon.jpg');
+}
+
+#home .main-title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0;
+  z-index: 2;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.home-intro {
+  position: absolute;
+  top: 120px; 
+  left: 60px;
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  max-width: 400px;
+  z-index: 2;
+}
+
+.profile-photo {
+  width: 140px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: none;
+}
+
+.intro-text {
+  color: white;
+  background: rgba(0,0,0,0.35);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 240px;
+  line-height: 1.5;
+}
+
+
+#about {
+  background-image: url('prada.jpg');
+}
+
+#about .about-title {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0;
+  z-index: 2;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.4);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#contact {
+  background-image: url('cesare.jpg');
+}
+
+#contact p {
+  margin-bottom: 12px;
+  margin-left: 60px; 
+  line-height: 1.5;    
+}
+
+.contact-box {
+  width: 70%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 6px solid #007acc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  color: #111;
+  margin-top: 20px;
+}
+
+.contact-box p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #76060691;
+  color: #111;
+}
+
+.about-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+.about-row.right {
+  justify-content: flex-end;
+}
+
+.about-box {
+  width: 70%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 6px solid #007acc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  color: #111;
+}
+
+.about-box h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #007acc;
+}
+
+.about-box p {
+  margin: 10px 0 0;
+  line-height: 1.6;
+}
+
+.cat-box {
+  position: absolute;
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  bottom: 30px;
+  z-index: 1;
+}
+
+.cat-box.left {
+  left: 40px;
+}
+
+.cat-box.middle {
+  left: 300px;
+}
+
+.cat-box.right {
+  right: 40px;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: rgb(147, 33, 115);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
